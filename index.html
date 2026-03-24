@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trade with FMX | Crypto Payments</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="fmx.css">
+<link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-mark">FX</span>
+    Trade with FMX
+  </a>
+  <ul class="nav-links">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#coins">Coins</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="https://wa.me/2348146383281" target="_blank" class="nav-cta">Get Started</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="#how"          onclick="closeNav()">How It Works</a>
+  <a href="#features"     onclick="closeNav()">Features</a>
+  <a href="#coins"        onclick="closeNav()">Coins</a>
+  <a href="#testimonials" onclick="closeNav()">Reviews</a>
+  <a href="#why-bank"     onclick="closeNav()">Why FMX?</a>
+  <a href="#faq"          onclick="closeNav()">FAQ</a>
+  <a href="https://wa.me/2348146383281" target="_blank" class="mob-cta" onclick="closeNav()">💬 Get Started on WhatsApp</a>
+</div>
+
+<!-- LIVE COUNTER BAR -->
+<div class="live-bar">
+  <span class="live-dot"></span>
+  <span class="live-text">Live — <strong id="liveCount" class="live-num">0</strong> trades completed in the last hour</span>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="tick"><span class="tn">BTC</span> $67,420 <span class="tup">▲ +1.8%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">ETH</span> $3,580 <span class="tup">▲ +3.1%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">USDT</span> $1.00 <span class="tup">+0.0%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">BNB</span> $592 <span class="tdn">▼ -0.6%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">SOL</span> $178 <span class="tup">▲ +5.2%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">USDC</span> $1.00 <span class="tup">+0.0%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">BTC</span> $67,420 <span class="tup">▲ +1.8%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">ETH</span> $3,580 <span class="tup">▲ +3.1%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">USDT</span> $1.00 <span class="tup">+0.0%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">BNB</span> $592 <span class="tdn">▼ -0.6%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">SOL</span> $178 <span class="tup">▲ +5.2%</span></span><span class="tsep">·</span>
+    <span class="tick"><span class="tn">USDC</span> $1.00 <span class="tup">+0.0%</span></span><span class="tsep">·</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="badge-dot"></span> Live &amp; trusted in Nigeria</div>
+      <h1>Fast &amp; Secure<br /><span class="accent">Crypto Payments</span><br />with FMX</h1>
+      <p>Send, receive, and manage your cryptocurrency in seconds. Low fees, top security, and support for all major coins.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/2348146383281" target="_blank" class="btn-primary">Buy Crypto</a>
+        <a href="https://wa.me/2348146383281" target="_blank" class="btn-secondary">Sell Crypto</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="float-tag">✓ Transaction sent<span>Just now · $240.00 USDT</span></div>
+      <div class="hero-right-inner">
+        <div class="balance-card">
+          <div class="bal-label">Total Portfolio</div>
+          <div class="bal-amount" id="balAmt">$4,820.50</div>
+          <div class="bal-change">↑ +2.4% this week</div>
+          <div class="mini-chart">
+            <div class="mbar" style="height:30%"></div>
+            <div class="mbar" style="height:55%"></div>
+            <div class="mbar" style="height:40%"></div>
+            <div class="mbar" style="height:70%"></div>
+            <div class="mbar" style="height:50%"></div>
+            <div class="mbar" style="height:85%"></div>
+            <div class="mbar" style="height:65%"></div>
+            <div class="mbar hi" style="height:100%"></div>
+          </div>
+          <div class="card-chips">
+            <div class="chip"><span class="cdot" style="background:#f7931a"></span>BTC</div>
+            <div class="chip"><span class="cdot" style="background:#627eea"></span>ETH</div>
+            <div class="chip"><span class="cdot" style="background:#26a17b"></span>USDT</div>
+          </div>
+        </div>
+      </div>
+      <div class="float-tag2">
+        <div class="ft-icon">⚡</div>
+        <div><strong>2 min avg</strong><span class="ft-lbl">Transaction speed</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><div class="stat-num counter" data-target="2400" data-suffix="+">0</div><div class="stat-lbl">Happy customers</div></div>
+    <div class="stat-item reveal rd1"><div class="stat-num">₦50m+</div><div class="stat-lbl">Volume traded</div></div>
+    <div class="stat-item reveal rd2"><div class="stat-num">&lt;1 min</div><div class="stat-lbl">Avg transaction</div></div>
+    <div class="stat-item reveal rd3"><div class="stat-num counter" data-target="99" data-suffix=".9%">0</div><div class="stat-lbl">Uptime</div></div>
+  </div>
+</div>
+
+<!-- TRUST MARQUEE -->
+<div class="trust-bar">
+  <div class="trust-track">
+    <span class="tbadge"><span class="tbdot"></span><strong>Verified Vendor</strong></span>
+    <span class="tbadge"><span class="tbdot"></span><strong>2,400+</strong> trades completed</span>
+    <span class="tbadge"><span class="tbdot"></span><strong>Zero</strong> fraud cases</span>
+    <span class="tbadge"><span class="tbdot"></span>Avg payout in <strong>&lt;1 min</strong></span>
+    <span class="tbadge"><span class="tbdot"></span><strong>WhatsApp</strong> support 24/7</span>
+    <span class="tbadge"><span class="tbdot"></span><strong>₦50m+</strong> volume traded</span>
+    <span class="tbadge"><span class="tbdot"></span>Trusted across <strong>Nigeria</strong></span>
+    <span class="tbadge"><span class="tbdot"></span>Best rates, <strong>guaranteed</strong></span>
+    <span class="tbadge"><span class="tbdot"></span><strong>Verified Vendor</strong></span>
+    <span class="tbadge"><span class="tbdot"></span><strong>2,400+</strong> trades completed</span>
+    <span class="tbadge"><span class="tbdot"></span><strong>Zero</strong> fraud cases</span>
+    <span class="tbadge"><span class="tbdot"></span>Avg payout in <strong>&lt;1 min</strong></span>
+    <span class="tbadge"><span class="tbdot"></span><strong>WhatsApp</strong> support 24/7</span>
+    <span class="tbadge"><span class="tbdot"></span><strong>₦2.1B+</strong> volume traded</span>
+    <span class="tbadge"><span class="tbdot"></span>Trusted across <strong>Nigeria</strong></span>
+    <span class="tbadge"><span class="tbdot"></span>Best rates, <strong>guaranteed</strong></span>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-inner">
+    <div class="stag reveal">Simple process</div>
+    <h2 class="stitle reveal">How it works</h2>
+    <p class="ssub reveal">Buy or sell crypto with FMX in four easy steps — no app download needed.</p>
+    <div class="steps-grid">
+      <div class="step-item reveal">
+        <div class="step-num">01</div>
+        <div><h3>Message Us</h3><p>Reach out on WhatsApp with the coin you want and the amount in naira or USD.</p></div>
+      </div>
+      <div class="step-item reveal rd1">
+        <div class="step-num">02</div>
+        <div><h3>Get a Rate</h3><p>We send you a live rate instantly. No hidden fees — what you see is what you get.</p></div>
+      </div>
+      <div class="step-item reveal rd2">
+        <div class="step-num">03</div>
+        <div><h3>Make Payment</h3><p>Pay via bank transfer. Once confirmed, your crypto hits your wallet in under 2 minutes.</p></div>
+      </div>
+      <div class="step-item reveal rd3">
+        <div class="step-num">04</div>
+        <div><h3>Done!</h3><p>Receive your crypto or naira — fast, safe, and hassle-free. Repeat anytime.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" style="background:var(--bg);">
+  <div class="section-inner">
+    <div class="stag reveal">Why FMX</div>
+    <h2 class="stitle reveal">Everything you need in one place</h2>
+    <p class="ssub reveal">No complicated dashboards. Just fast, reliable crypto transactions with human support.</p>
+    <div class="feat-grid">
+      <div class="feat-card reveal"><div class="feat-icon">🔒</div><h3>Secure Wallet</h3><p>Advanced encryption and blockchain-level security protect your assets at every step.</p></div>
+      <div class="feat-card reveal rd1"><div class="feat-icon">⚡</div><h3>Instant Transfers</h3><p>Send and receive crypto globally in under two minutes, with some of the lowest fees around.</p></div>
+      <div class="feat-card reveal rd2"><div class="feat-icon">🌐</div><h3>Multi-Currency</h3><p>Support for Bitcoin, Ethereum, USDT, BNB, and more coins added regularly.</p></div>
+      <div class="feat-card reveal rd3"><div class="feat-icon">💬</div><h3>Human Support</h3><p>Real person, real help — reach us on WhatsApp anytime. No bots, no scripts.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COINS -->
+<section id="coins">
+  <div class="section-inner">
+    <div class="stag reveal">Supported Assets</div>
+    <h2 class="stitle reveal">Trade your favourite coins</h2>
+    <p class="ssub reveal">Competitive rates on all major cryptocurrencies, updated in real time.</p>
+    <div class="coins-grid">
+      <div class="coin-card reveal"><div class="coin-logo" style="background:#fff7ed;color:#f7931a;">₿</div><div><div class="coin-name">Bitcoin</div><div class="coin-tick">BTC</div></div><div class="coin-chg pos">+1.8%</div></div>
+      <div class="coin-card reveal rd1"><div class="coin-logo" style="background:#f0f0ff;color:#627eea;">Ξ</div><div><div class="coin-name">Ethereum</div><div class="coin-tick">ETH</div></div><div class="coin-chg pos">+3.1%</div></div>
+      <div class="coin-card reveal rd2"><div class="coin-logo" style="background:#e7f8f2;color:#26a17b;">₮</div><div><div class="coin-name">Tether</div><div class="coin-tick">USDT</div></div><div class="coin-chg pos">+0.0%</div></div>
+      <div class="coin-card reveal rd1"><div class="coin-logo" style="background:#fefbe7;color:#f3ba2f;">B</div><div><div class="coin-name">BNB</div><div class="coin-tick">BNB</div></div><div class="coin-chg neg">-0.6%</div></div>
+      <div class="coin-card reveal rd2"><div class="coin-logo" style="background:#f0f8ff;color:#2775ca;">$</div><div><div class="coin-name">USD Coin</div><div class="coin-tick">USDC</div></div><div class="coin-chg pos">+0.0%</div></div>
+      <div class="coin-card reveal rd3"><div class="coin-logo" style="background:#edf8f0;color:#16c784;">S</div><div><div class="coin-name">Solana</div><div class="coin-tick">SOL</div></div><div class="coin-chg pos">+5.2%</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="background:var(--surface);">
+  <div class="section-inner">
+    <div class="stag reveal">Reviews</div>
+    <h2 class="stitle reveal">Trusted by real people</h2>
+    <p class="ssub reveal">Thousands of Nigerians buy and sell crypto with FMX every day.</p>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Fastest USDT sale I've ever done. Money hit my account in under 3 minutes. FMX is the real deal."</p>
+        <div class="testi-author"><div class="testi-av" style="background:#1a56db;">W</div><div><div class="testi-name">Wale</div><div class="testi-loc">Lagos, Nigeria</div></div></div>
+      </div>
+      <div class="testi-card reveal rd1">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"I was scared of crypto scams but FMX's WhatsApp support made the whole thing stress-free. 100% legit."</p>
+        <div class="testi-author"><div class="testi-av" style="background:#0f7b5a;">T</div><div><div class="testi-name">Temi</div><div class="testi-loc">Abuja, Nigeria</div></div></div>
+      </div>
+      <div class="testi-card reveal rd2">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Best rates in the market plus great service. I've tried 4 P2P vendors, FMX stays winning."</p>
+        <div class="testi-author"><div class="testi-av" style="background:#b45309;">Dee</div><div><div class="testi-name">Dee</div><div class="testi-loc">Port Harcourt, Nigeria</div></div></div>
+      </div>
+      <div class="testi-card reveal rd1">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Sold my BTC in 5 minutes flat. The rate was better than every other vendor I've used. No stress at all."</p>
+        <div class="testi-author"><div class="testi-av" style="background:#7c3aed;">Kx</div><div><div class="testi-name">Kxng</div><div class="testi-loc">Ibadan, Nigeria</div></div></div>
+      </div>
+      <div class="testi-card reveal rd2">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Quick, honest, and reliable. FMX sorted my USDC trade at midnight with zero hassle. Highly recommend."</p>
+        <div class="testi-author"><div class="testi-av" style="background:#0e7490;">Zee</div><div><div class="testi-name">Zee</div><div class="testi-loc">Enugu, Nigeria</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NOT A BANK -->
+<section id="why-bank">
+  <div class="section-inner">
+    <div class="stag reveal">The difference</div>
+    <h2 class="stitle reveal">Why not just use a bank?</h2>
+    <p class="ssub reveal">Traditional channels make crypto complicated. FMX keeps it simple.</p>
+    <div class="compare-grid reveal">
+      <div class="compare-col col-bad">
+        <div class="chead">🏦 Traditional / Exchange apps</div>
+        <div class="crow"><span>✗</span> Long KYC verification processes</div>
+        <div class="crow"><span>✗</span> Hidden fees eating your profit</div>
+        <div class="crow"><span>✗</span> Slow support — tickets, bots, delays</div>
+        <div class="crow"><span>✗</span> Accounts frozen without warning</div>
+        <div class="crow"><span>✗</span> Complex interfaces, steep learning curve</div>
+      </div>
+      <div class="compare-col col-good">
+        <div class="chead">⚡ Trade with FMX</div>
+        <div class="crow"><span>✓</span> No sign-up needed — just WhatsApp</div>
+        <div class="crow"><span>✓</span> Transparent rates, zero hidden charges</div>
+        <div class="crow"><span>✓</span> Real human available 24/7</div>
+        <div class="crow"><span>✓</span> Payout confirmed in under 1 minutes</div>
+        <div class="crow"><span>✓</span> Simple, personal, and reliable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--bg);">
+  <div class="section-inner">
+    <div class="stag reveal">FAQ</div>
+    <h2 class="stitle reveal">Common questions</h2>
+    <p class="ssub reveal">Everything you need to know before getting started.</p>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">How do I buy crypto with FMX?<i class="faq-icon">+</i></div>
+        <div class="faq-a">Simply reach out via WhatsApp with the coin and amount you want, get a rate, make your naira payment, and receive your crypto — usually within 2 minutes.</div>
+      </div>
+      <div class="faq-item reveal rd1">
+        <div class="faq-q" onclick="toggleFaq(this)">What payment methods are accepted?<i class="faq-icon">+</i></div>
+        <div class="faq-a">We accept Nigerian bank transfers (all major banks) for buying and selling. Paystack is also available for certain transactions.</div>
+      </div>
+      <div class="faq-item reveal rd2">
+        <div class="faq-q" onclick="toggleFaq(this)">Is there a minimum or maximum transaction?<i class="faq-icon">+</i></div>
+        <div class="faq-a">Minimum is ₦5,000 equivalent. There's no hard maximum — for large transactions, just reach out on WhatsApp and we'll sort the details.</div>
+      </div>
+      <div class="faq-item reveal rd3">
+        <div class="faq-q" onclick="toggleFaq(this)">How long does a transaction take?<i class="faq-icon">+</i></div>
+        <div class="faq-a">Most transactions complete within 1–3 minutes after payment confirmation. Blockchain network congestion may occasionally cause slight delays.</div>
+      </div>
+      <div class="faq-item reveal rd4">
+        <div class="faq-q" onclick="toggleFaq(this)">Is Trade with FMX safe?<i class="faq-icon">+</i></div>
+        <div class="faq-a">Yes. FMX has served thousands of satisfied customers with zero fraud cases. All transactions are verified and supported by real human communication via WhatsApp.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section reveal">
+  <h2>Ready to start trading?</h2>
+  <p>Join thousands of Nigerians buying and selling crypto securely with FMX.</p>
+  <a href="https://wa.me/2348146383281" target="_blank" class="btn-white">Chat on WhatsApp →</a>
+</div>
+
+<!-- REFERRAL BANNER -->
+<div class="referral-bar">
+  <div class="referral-inner">
+    <div class="ref-info">
+      <div class="ref-emoji">🎁</div>
+      <div>
+        <div class="ref-title">Refer a friend, earn a bonus</div>
+        <div class="ref-sub">Know someone who trades crypto? Send them to FMX and get rewarded when they complete their first trade.</div>
+      </div>
+    </div>
+    <a href="https://wa.me/2348146383281?text=Hi%2C%20I%20want%20to%20refer%20a%20friend%20to%20FMX" target="_blank" class="btn-ref">Refer Now →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="#" class="footer-logo-link">
+          <span class="footer-logo-mark">FX</span>
+          <span class="footer-logo-name">Trade with FMX</span>
+        </a>
+        <p class="footer-tagline">Fast, secure, and personal crypto trading for Nigerians. No apps, no KYC — just WhatsApp.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/2348146383281" target="_blank" class="fsocial" title="WhatsApp">💬</a>
+          <a href="https://x.com/tholu_blessed" target="_blank" class="fsocial" title="X / Twitter" style="font-size:13px; font-weight:700;">𝕏</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#coins">Supported Coins</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Trade</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/2348146383281?text=I%20want%20to%20buy%20crypto" target="_blank">Buy Crypto</a></li>
+          <li><a href="https://wa.me/2348146383281?text=I%20want%20to%20sell%20crypto" target="_blank">Sell Crypto</a></li>
+          <li><a href="https://wa.me/2348146383281?text=I%20want%20to%20check%20current%20rates" target="_blank">Check Rates</a></li>
+          <li><a href="https://wa.me/2348146383281?text=I%20want%20to%20refer%20a%20friend" target="_blank">Refer a Friend</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact">
+          <a href="https://wa.me/2348146383281" target="_blank"><span>💬</span> +234 814 638 3281</a>
+          <a href="mailto:Tradewithfmxchange@gmail.com"><span>✉</span> Tradewithfmxchange@gmail.com</a>
+          <a href="https://x.com/tholu_blessed" target="_blank"><span style="font-weight:700;">𝕏</span> @tholu_blessed</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Trade with FMX. All rights reserved.</p>
+      <p>Crypto Payments Made Easy · Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a href="https://wa.me/2348146383281" target="_blank" class="wa-fab" aria-label="Chat on WhatsApp">
+  <span class="wa-tip">Chat on WhatsApp</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="fmx.js"></script>
+</body>
+</html>
