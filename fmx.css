@@ -8,9 +8,9 @@
   --border2: #c8cfd8;
   --text: #0d1117;
   --muted: #5a6478;
-  --accent: #1a56db;
-  --accent-light: #eaf0fd;
-  --accent-dark: #1040b0;
+  --accent: #7c3aed;
+  --accent-light: #ede9fe;
+  --accent-dark: #5b21b6;
   --green: #0f7b5a;
   --green-bg: #e7f8f1;
   --radius: 12px;
@@ -143,7 +143,7 @@ nav {
   text-align:center; padding:15px;
   border-radius:var(--radius-pill);
   border-bottom:none; font-size:16px !important;
-  box-shadow:0 4px 18px rgba(26,86,219,0.3);
+  box-shadow:0 4px 18px rgba(124,58,237,0.3);
 }
 
 /* ── LIVE COUNTER BAR ── */
@@ -201,10 +201,10 @@ nav {
   background:var(--accent); color:#fff;
   padding:13px 26px; border-radius:var(--radius-pill);
   font-size:15px; font-weight:500; text-decoration:none; display:inline-block;
-  box-shadow:0 4px 18px rgba(26,86,219,0.28);
+  box-shadow:0 4px 18px rgba(124,58,237,0.28);
   transition:background 0.18s, transform 0.14s, box-shadow 0.18s;
 }
-.btn-primary:hover { background:var(--accent-dark); transform:translateY(-2px); box-shadow:0 8px 28px rgba(26,86,219,0.38); }
+.btn-primary:hover { background:var(--accent-dark); transform:translateY(-2px); box-shadow:0 8px 28px rgba(124,58,237,0.38); }
 
 .btn-secondary {
   background:var(--surface); color:var(--text);
@@ -320,10 +320,10 @@ section { padding:76px 5%; }
   display:flex; align-items:center; justify-content:center;
   font-size:20px; font-weight:600; font-family:'DM Mono',monospace;
   margin-bottom:20px; position:relative; z-index:1;
-  box-shadow:0 4px 14px rgba(26,86,219,0.25);
+  box-shadow:0 4px 14px rgba(124,58,237,0.25);
   transition:transform 0.3s, box-shadow 0.3s;
 }
-.step-item:hover .step-num { transform:scale(1.1); box-shadow:0 8px 24px rgba(26,86,219,0.38); }
+.step-item:hover .step-num { transform:scale(1.1); box-shadow:0 8px 24px rgba(124,58,237,0.38); }
 .step-item h3 { font-size:15px; font-weight:600; margin-bottom:8px; }
 .step-item p  { font-size:14px; color:var(--muted); line-height:1.65; }
 
@@ -334,7 +334,7 @@ section { padding:76px 5%; }
   border-radius:var(--radius-lg); padding:28px;
   transition:box-shadow 0.25s, transform 0.25s, border-color 0.25s; cursor:default;
 }
-.feat-card:hover { box-shadow:0 8px 32px rgba(26,86,219,0.1); transform:translateY(-4px); border-color:rgba(26,86,219,0.22); }
+.feat-card:hover { box-shadow:0 8px 32px rgba(124,58,237,0.1); transform:translateY(-4px); border-color:rgba(124,58,237,0.22); }
 .feat-icon {
   width:46px; height:46px; border-radius:var(--radius);
   background:var(--accent-light);
